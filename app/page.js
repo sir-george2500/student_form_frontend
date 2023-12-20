@@ -102,9 +102,14 @@ export default function Home() {
   className="mb-2"
 />
      
-   <div className="flex flex-col bg-white items-center w-5/6 px-6 py-4 rounded-md app-shadow"> 
-
-       <Formik
+          <div className="
+            flex flex-col
+          bg-white
+            items-center
+            w-full sm:w-5/6 md:w-2/3 lg:w-1/2 xl:w-1/3
+            px-6 py-2 rounded-md app-shadow mx-auto
+          ">
+        <Formik
           initialValues={initialValues}
           validationSchema={validationSchema}
           onSubmit={onSubmit}
