@@ -105,11 +105,12 @@ export default function Home() {
 />
      
           <div className="
-            flex flex-col
-          bg-white
-            items-center
-            w-full sm:w-5/6 md:w-2/3 lg:w-1/2 xl:w-1/3
-            px-6 py-2 rounded-md app-shadow mx-auto
+           flex flex-col
+           bg-white
+           items-center
+           w-full sm:w-5/6 md:w-4/5 lg:w-3/4 xl:w-2/3
+           px-4 py-4 sm:px-6 sm:py-6 md:px-8 md:py-8 lg:px-10 lg:py-10 xl:px-12 xl:py-12
+           rounded-md app-shadow mx-auto
           ">
         <Formik
           initialValues={initialValues}
@@ -377,7 +378,7 @@ export default function Home() {
             </button>
           </Form>
        </Formik>       
-    </div>
+         </div>
      </>
     }
     </main>
