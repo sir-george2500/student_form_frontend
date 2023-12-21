@@ -64,9 +64,10 @@ export default function Home() {
       } else {
         // Handle error responses (status code other than 2xx)
         const errorData = await response.json();
-        console.error("API Error:", errorData.detail);
+        console.error("API Error:", errorData);
         setSubmissionStatus("error");
-      }
+        setErrorMessage(errorData.detail)
+      }""
     } catch (error) {
       // Handle any errors that occurred during the API call
       console.error("Fetch Error:", error);
@@ -118,7 +119,7 @@ export default function Home() {
           <Form className="max-w-md mx-auto">
             {submissionStatus === "error" && (
               <div className="text-red-500 text-sm mb-3">
-                There was an error processing your request. Please try again later.
+                {errMessage}
               </div>
             )}
 
