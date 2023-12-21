@@ -64,7 +64,7 @@ export default function Home() {
       } else {
         // Handle error responses (status code other than 2xx)
         const errorData = await response.json();
-        console.error("API Error:", errorData);
+        console.error("API Error:", errorData.detail);
         setSubmissionStatus("error");
       }
     } catch (error) {
