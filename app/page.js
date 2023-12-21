@@ -33,6 +33,7 @@ const initialValues = {
 
 export default function Home() {
   const [submissionStatus, setSubmissionStatus] = useState(null);
+  const [errMessage, setErrorMessage] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const onSubmit = async (values , { resetForm }) => {
     setIsLoading(true);
@@ -44,7 +45,7 @@ export default function Home() {
 
     try {
       // Make API call using fetch
-      const response = await fetch("http://127.0.0.1:8000/api/students/", {
+      const response = await fetch("https://student-form-backend.vercel.app/api/students/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
