@@ -82,17 +82,30 @@ export default function Home() {
  <main className="flex flex-col items-center justify-between p-24">
        {/* Submission Status Message */}
 {submissionStatus === "success"?
-    <div className="flex items-center justify-center">
-     <div className="flex flex-col bg-white items-center w-50 px-6 py-4 rounded-md app-shadow">
-       <div className="flex items-center justify-center text-green-700 text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl">
-        <p>
-          Congulation! you have successfully signed up.
-          <br />
-          Silicon Valley Liberia will be in touch soon
-        </p>
+  <div className="flex items-center justify-center">
+  <div className="flex flex-col bg-white items-center w-50 px-6 py-4 rounded-md app-shadow ">
+    <div className="flex flex-col items-center justify-center text-green-700 text-sm md:text-lg lg:text-xl">
+      <div className="text-center mb-4">
+        <span className="text-4xl font-bold text-green-500">Congratulations!</span>
       </div>
+      {/** for desktop **/}
+      <p className="sm:flex hidden text-center">
+        You have successfully signed up.<br />
+        Silicon Valley Liberia will be in touch soon.
+      </p>
+
+      { /* for mobile */}
+      <p className="sm:hidden flex relative">
+        You have successfully signed up.<br />
+        Silicon Valley Liberia will be in touch soon.
+      </p>
     </div>
-    </div>
+  </div>
+</div>
+
+
+
+ 
      :
      <>
   <Image
@@ -380,7 +393,7 @@ export default function Home() {
           </Form>
        </Formik>       
          </div>
-         {/** this is the form  */}
+         {/** this is the form for mobile  */}
          <div className="sm:hidden flex relative
  
            bg-white
